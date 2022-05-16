@@ -1,20 +1,13 @@
-const res = require("express/lib/response");
 const poll = require("./poll");
 
 async function findAllUsers() {
   const query = `SELECT * FROM users`;
   const result = await poll.query(query);
 
-  let users = [
-    {
-      id: "",
-      firstname: "",
-      lastname: "",
-    },
-  ];
+  let users = [];
 
   if (result) {
-    [...users] = result;
+    users = result;
   }
 
   return users;
@@ -24,16 +17,10 @@ async function findUserById(id) {
   const query = `SELECT * FROM users WHERE id = "${id}"`;
   const result = await poll.query(query);
 
-  let user = [
-    {
-      id: "",
-      firstname: "",
-      lastname: "",
-    },
-  ];
+  let user = [];
 
   if (result) {
-    [...user] = result;
+    user = result;
   }
 
   return user;

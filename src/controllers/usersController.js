@@ -23,11 +23,9 @@ const createNewUser = async (req, res) => {
     );
     return res.status(201).json({ message: "User successfully created " });
   } else {
-    return res
-      .status(400)
-      .json({
-        message: "It is necessary the first and last name to do this action",
-      });
+    return res.status(400).json({
+      message: "It is necessary the first and last name to do this action",
+    });
   }
 };
 
@@ -41,11 +39,9 @@ const updateUser = async (req, res) => {
     );
     res.status(200).json({ message: "User successfully update" });
   } else {
-    return res
-      .status(400)
-      .json({
-        message: "It is necessary the first and last name to do this action",
-      });
+    return res.status(400).json({
+      message: "It is necessary the first and last name to do this action",
+    });
   }
 };
 
