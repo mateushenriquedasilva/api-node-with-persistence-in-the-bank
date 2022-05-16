@@ -15,5 +15,5 @@ app.use(express.static(__dirname + "/public"));
 app.use(usersRouter);
 app.listen(port, () => {
   console.log(`Connections: ${poll.activeConnections()}`);
-  console.log(`Server started on port ${port}!`);
+  console.log(`Server started in http://localhost:${port}/`);
 });

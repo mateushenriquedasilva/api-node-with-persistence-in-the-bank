@@ -18,13 +18,19 @@ header {
 
 main {
   padding: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
-main ul {
-  list-style: none;
+main table {
+  background-color: #333;
+  font-size: 1.2rem;
   margin-top: 1rem;
+  border: none;
+  max-width: 700px;
 }
 
-main ul li a {
-    color: #dddddd;
+main table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #6e6e6e;
 }
